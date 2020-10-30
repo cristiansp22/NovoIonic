@@ -17,3 +17,13 @@ export class HomePage {
 loging(){
   this.navCtrl.setRoot('CategoriasPage');
 }
+constructor(public navCtrl: NavController, public menu: MenuController) {
+
+}
+ionViewWillEnter() {
+  this.menu.swipeEnable(false);
+}
+
+ionViewDidLeave() {
+  this.menu.swipeEnable(true);
+}
